@@ -11,24 +11,25 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #f5f5f0;
+            background: #F8FAFC;
             min-height: 100vh;
+            color: #1E293B;
+            line-height: 1.5;
         }
 
         .header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e7eb;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E2E8F0;
             position: sticky;
             top: 0;
             z-index: 50;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .header-content {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 16px 24px;
+            padding: 20px 32px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -41,27 +42,27 @@
         }
 
         .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: #3d9970;
-            border-radius: 12px;
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
         }
 
         .logo-text h1 {
-            font-size: 24px;
-            font-weight: 500;
-            color: #111827;
+            font-size: 22px;
+            font-weight: 700;
+            color: #0F172A;
             letter-spacing: -0.02em;
         }
 
         .logo-text p {
-            font-size: 11px;
-            color: #6b7280;
-            font-weight: 400;
+            font-size: 12px;
+            color: #64748B;
+            font-weight: 500;
         }
 
         .status-badge {
@@ -69,15 +70,15 @@
             align-items: center;
             gap: 8px;
             padding: 8px 16px;
-            background: #d1f4e0;
-            border: 1px solid #91e5b5;
+            background: #ECFDF5;
+            border: 1px solid #D1FAE5;
             border-radius: 20px;
         }
 
         .status-dot {
             width: 8px;
             height: 8px;
-            background: #3d9970;
+            background: #10B981;
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
@@ -87,191 +88,232 @@
             50% { opacity: 0.5; }
         }
 
-        .nav-container {
-            max-width: 1280px;
+        .hero {
+            background: linear-gradient(to bottom, #FFFFFF 0%, #F8FAFC 100%);
+            border-bottom: 1px solid #E2E8F0;
+            padding: 80px 32px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 24px 24px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #64748B;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 32px 0;
         }
 
         .nav-tabs {
             display: flex;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background: #FFFFFF;
             padding: 6px;
-            border-radius: 16px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border: 1px solid #f3f4f6;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #E2E8F0;
         }
 
         .tab-button {
-            padding: 10px 24px;
+            padding: 12px 24px;
             border: none;
             background: none;
-            border-radius: 12px;
+            border-radius: 8px;
             font-size: 14px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s;
-            color: #6b7280;
+            color: #64748B;
         }
 
         .tab-button:hover {
-            background: #f3f4f6;
-            color: #111827;
+            background: #F1F5F9;
+            color: #1E293B;
         }
 
         .tab-button.active {
-            background: #3d9970;
+            background: #2563EB;
             color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
         }
 
         .main-content {
-            max-width: 1280px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 32px 24px;
+            padding: 32px 32px 64px;
         }
 
         .card {
-            background: white;
-            border-radius: 24px;
-            padding: 24px;
-            margin-bottom: 24px;
-            border: 1px solid #e5e7eb;
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+            border: 1px solid #E2E8F0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .card h2 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #111827;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0F172A;
             margin-bottom: 8px;
         }
 
         .card p {
-            color: #6b7280;
-            font-size: 14px;
-            margin-bottom: 20px;
+            color: #64748B;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
         }
 
         .stat-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 32px;
         }
 
         .stat-card {
-            background: #3d9970;
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
             border-radius: 16px;
-            padding: 24px;
+            padding: 32px;
             color: white;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .stat-card:nth-child(2) {
-            background: #2d7f5a;
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
         }
 
         .stat-card:nth-child(3) {
-            background: #1d5a3d;
+            background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
         }
 
         .stat-value {
-            font-size: 32px;
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
         }
 
         .stat-label {
-            font-size: 14px;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
         }
 
         .instrument-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
         }
 
         .instrument-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 16px;
-            padding: 20px;
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 24px;
             transition: all 0.2s;
         }
 
         .instrument-card:hover {
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
         }
 
         .instrument-header {
             display: flex;
             justify-content: space-between;
             align-items: start;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         .status-active {
-            background: #d1f4e0;
-            color: #1a5938;
-            border: 1px solid #91e5b5;
-            padding: 4px 10px;
+            background: #ECFDF5;
+            color: #065F46;
+            border: 1px solid #D1FAE5;
+            padding: 4px 12px;
             border-radius: 12px;
             font-size: 11px;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
         }
 
         .status-idle {
-            background: #f3f4f6;
-            color: #4b5563;
-            padding: 4px 10px;
+            background: #F1F5F9;
+            color: #475569;
+            border: 1px solid #E2E8F0;
+            padding: 4px 12px;
             border-radius: 12px;
             font-size: 11px;
-            font-weight: 500;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
         }
 
         .instrument-name {
-            font-weight: 600;
-            color: #111827;
+            font-weight: 700;
+            color: #0F172A;
             margin-bottom: 4px;
+            font-size: 1.05rem;
         }
 
         .instrument-type {
-            font-size: 13px;
-            color: #6b7280;
-            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #64748B;
+            margin-bottom: 16px;
+            font-weight: 500;
         }
 
         .instrument-metrics {
-            font-size: 11px;
-            color: #6b7280;
+            font-size: 0.85rem;
+            color: #64748B;
         }
 
         .metric-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            padding: 6px 0;
         }
 
         .metric-value {
-            font-weight: 500;
-            color: #374151;
+            font-weight: 600;
+            color: #1E293B;
         }
 
         .chart-container {
             position: relative;
-            height: 240px;
-            margin: 20px 0;
-            background: #f9fafb;
+            height: 280px;
+            margin: 24px 0;
+            background: #F8FAFC;
             border-radius: 12px;
-            padding: 20px;
+            padding: 32px;
+            border: 1px solid #E2E8F0;
         }
 
         .chart-line {
-            stroke: #3d9970;
+            stroke: #2563EB;
             stroke-width: 3;
             fill: none;
             stroke-linecap: round;
@@ -279,77 +321,83 @@
         }
 
         .chart-glow {
-            stroke: #3d9970;
+            stroke: #2563EB;
             stroke-width: 6;
             fill: none;
-            opacity: 0.3;
+            opacity: 0.15;
             filter: blur(4px);
         }
 
         .insight-box {
-            background: #d1f4e0;
-            border: 1px solid #91e5b5;
-            border-radius: 24px;
-            padding: 24px;
+            background: linear-gradient(to right, #EFF6FF 0%, #DBEAFE 100%);
+            border: 1px solid #BFDBFE;
+            border-radius: 16px;
+            padding: 32px;
             display: flex;
-            gap: 16px;
+            gap: 20px;
         }
 
         .insight-icon {
-            width: 48px;
-            height: 48px;
-            background: #3d9970;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
             border-radius: 12px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
         }
 
         .insight-content h3 {
-            font-weight: 600;
-            color: #111827;
-            margin-bottom: 8px;
+            font-weight: 700;
+            color: #0F172A;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
         }
 
         .insight-content p {
-            color: #374151;
-            margin-bottom: 16px;
-            line-height: 1.5;
+            color: #475569;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .button-primary {
-            background: #3d9970;
+            background: #2563EB;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-weight: 500;
-            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
         }
 
         .button-primary:hover {
-            background: #2d7f5a;
-            box-shadow: 0 2px 8px rgba(61, 153, 112, 0.3);
+            background: #1D4ED8;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+            transform: translateY(-1px);
         }
         
         .button-secondary {
-            background: #dc2626;
+            background: #EF4444;
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 12px;
-            font-weight: 500;
-            font-size: 14px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
         }
 
         .button-secondary:hover {
-            background: #b91c1c;
-            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+            background: #DC2626;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            transform: translateY(-1px);
         }
 
         .hidden {
@@ -367,21 +415,102 @@
         .legend {
             display: flex;
             justify-content: center;
-            gap: 24px;
-            margin-top: 20px;
-            font-size: 13px;
+            gap: 32px;
+            margin-top: 24px;
+            font-size: 0.9rem;
         }
 
         .legend-item {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            color: #64748B;
+            font-weight: 500;
         }
 
         .legend-dot {
             width: 16px;
             height: 16px;
             border-radius: 50%;
+        }
+
+        .chart-info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        .chart-badge {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: #64748B;
+        }
+
+        .current-value-badge {
+            padding: 6px 16px;
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            border-radius: 8px;
+            color: #1E40AF;
+            font-weight: 600;
+        }
+
+        .recommendation-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #E2E8F0;
+        }
+
+        .recommendation-params {
+            display: flex;
+            gap: 32px;
+            font-size: 0.9rem;
+        }
+
+        .param-item {
+            color: #64748B;
+        }
+
+        .param-item span {
+            font-weight: 700;
+            color: #0F172A;
+        }
+
+        .recommendation-result {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .predicted-yield {
+            text-align: right;
+        }
+
+        .predicted-yield-label {
+            font-size: 0.8rem;
+            color: #64748B;
+            margin-bottom: 2px;
+        }
+
+        .predicted-yield-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #10B981;
+        }
+
+        .confidence-range {
+            font-size: 0.8rem;
+            color: #94A3B8;
         }
     </style>
 </head>
@@ -390,7 +519,7 @@
         <div class="header-content">
             <div class="logo-section">
                 <div class="logo-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
                         <path d="M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
                     </svg>
                 </div>
@@ -401,10 +530,17 @@
             </div>
             <div class="status-badge">
                 <div class="status-dot"></div>
-                <span style="font-size: 13px; font-weight: 500; color: #1a5938;">Live</span>
+                <span style="font-size: 13px; font-weight: 600; color: #065F46;">System Online</span>
             </div>
         </div>
     </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Intelligent automation for the modern lab</h2>
+            <p>A DBTL intelligence platform for real-time monitoring, automation, and AI-guided experimentation</p>
+        </div>
+    </div>
 
     <div class="nav-container">
         <div class="nav-tabs">
@@ -419,23 +555,23 @@
         <div id="tab-dashboard">
             <div class="card">
                 <h2>Live Bioreactor Monitoring</h2>
-                <p>Optical density (OD₆₀₀) measurements every 5 minutes</p>
+                <p>Optical density (OD₆₀₀) measurements streaming in real-time from bioreactor sensors</p>
                 <div class="chart-container">
-                    <svg id="liveChart" width="100%" height="100%" viewBox="0 0 800 200">
+                    <svg id="liveChart" width="100%" height="100%" viewBox="0 0 800 220">
                         <!-- Chart will be drawn here -->
                     </svg>
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px;">
+                <div class="chart-info-row">
+                    <div class="chart-badge">
+                        <div style="width: 12px; height: 12px; background: #2563EB; border-radius: 50%;"></div>
+                        <span>Exponential growth phase</span>
+                    </div>
                     <div style="display: flex; gap: 16px; align-items: center;">
-                        <div style="display: flex; gap: 8px; align-items: center;">
-                            <div style="width: 12px; height: 12px; background: #3d9970; border-radius: 50%;"></div>
-                            <span style="color: #6b7280;">Exponential growth phase</span>
-                        </div>
-                        <div style="padding: 4px 12px; background: #d1f4e0; border-radius: 8px; color: #1a5938; font-weight: 500;">
-                            Current: <span id="currentOD">1.456</span>
+                        <span style="color: #94A3B8; font-size: 0.85rem;">Doubling time: ~45 min</span>
+                        <div class="current-value-badge">
+                            Current OD: <span id="currentOD">1.456</span>
                         </div>
                     </div>
-                    <div style="color: #9ca3af;">Doubling time: ~45 min</div>
                 </div>
             </div>
 
@@ -456,10 +592,11 @@
 
             <div class="card">
                 <h2>Connected Instruments</h2>
+                <p style="margin-bottom: 32px;">Real-time status and performance metrics from laboratory automation systems</p>
                 <div class="instrument-grid">
                     <div class="instrument-card">
                         <div class="instrument-header">
-                            <svg width="28" height="28" fill="none" stroke="#3d9970" stroke-width="2" viewBox="0 0 24 24">
+                            <svg width="32" height="32" fill="none" stroke="#2563EB" stroke-width="2" viewBox="0 0 24 24">
                                 <ellipse cx="12" cy="7" rx="8" ry="3"/>
                                 <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"/>
                                 <path d="M4 12c0 2.21 3.582 4 8 4s8-1.79 8-4"/>
@@ -481,7 +618,7 @@
                     </div>
                     <div class="instrument-card">
                         <div class="instrument-header">
-                            <svg width="28" height="28" fill="none" stroke="#3d9970" stroke-width="2" viewBox="0 0 24 24">
+                            <svg width="32" height="32" fill="none" stroke="#2563EB" stroke-width="2" viewBox="0 0 24 24">
                                 <ellipse cx="12" cy="7" rx="8" ry="3"/>
                                 <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"/>
                             </svg>
@@ -502,7 +639,7 @@
                     </div>
                     <div class="instrument-card">
                         <div class="instrument-header">
-                            <svg width="28" height="28" fill="none" stroke="#3d9970" stroke-width="2" viewBox="0 0 24 24">
+                            <svg width="32" height="32" fill="none" stroke="#2563EB" stroke-width="2" viewBox="0 0 24 24">
                                 <ellipse cx="12" cy="7" rx="8" ry="3"/>
                                 <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"/>
                             </svg>
@@ -523,7 +660,7 @@
                     </div>
                     <div class="instrument-card">
                         <div class="instrument-header">
-                            <svg width="28" height="28" fill="none" stroke="#9ca3af" stroke-width="2" viewBox="0 0 24 24">
+                            <svg width="32" height="32" fill="none" stroke="#94A3B8" stroke-width="2" viewBox="0 0 24 24">
                                 <ellipse cx="12" cy="7" rx="8" ry="3"/>
                                 <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7"/>
                             </svg>
@@ -551,22 +688,22 @@
             <div class="card">
                 <h2>Design Space Explorer</h2>
                 <p>Visualizing 50 experiments across temperature and pH parameters. Point size and color indicate yield performance.</p>
-                <div style="height: 450px; background: #f9fafb; border-radius: 12px; padding: 40px;">
+                <div style="height: 450px; background: #F8FAFC; border-radius: 12px; padding: 40px; border: 1px solid #E2E8F0;">
                     <svg id="scatterChart" width="100%" height="100%" viewBox="0 0 700 350">
                         <!-- Scatter plot will be drawn here -->
                     </svg>
                 </div>
                 <div class="legend">
                     <div class="legend-item">
-                        <div class="legend-dot" style="background: #3d9970;"></div>
+                        <div class="legend-dot" style="background: #10B981;"></div>
                         <span>High Yield (≥70%)</span>
                     </div>
                     <div class="legend-item">
-                        <div class="legend-dot" style="background: #f59e0b;"></div>
+                        <div class="legend-dot" style="background: #F59E0B;"></div>
                         <span>Medium (50-70%)</span>
                     </div>
                     <div class="legend-item">
-                        <div class="legend-dot" style="background: #dc2626;"></div>
+                        <div class="legend-dot" style="background: #EF4444;"></div>
                         <span>Low (<50%)</span>
                     </div>
                 </div>
@@ -574,7 +711,7 @@
 
             <div class="insight-box">
                 <div class="insight-icon">
-                    <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24">
                         <rect x="4" y="4" width="16" height="16" rx="2"/>
                         <rect x="9" y="9" width="6" height="6"/>
                     </svg>
@@ -595,40 +732,40 @@
             </div>
 
             <div class="card">
-                <div style="display: flex; gap: 16px; align-items: start;">
-                    <div style="width: 48px; height: 48px; background: #3d9970; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
-                        <svg width="24" height="24" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                <div style="display: flex; gap: 20px; align-items: start;">
+                    <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);">
+                        <svg width="28" height="28" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24">
                             <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
                         </svg>
                     </div>
                     <div style="flex: 1;">
-                        <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Optimal Temperature Window Identified</h3>
-                        <p style="color: #374151; margin-bottom: 16px; line-height: 1.6;">Analysis shows 18% higher titer at 30-32°C vs 37°C. Temperature-sensitive promoters may benefit from reduced cultivation temperature.</p>
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                            <span style="font-size: 13px; color: #6b7280; font-weight: 500;">Confidence:</span>
-                            <div style="flex: 1; max-width: 150px; background: #e5e7eb; height: 10px; border-radius: 5px; overflow: hidden;">
-                                <div style="width: 89%; height: 100%; background: #3d9970;"></div>
+                        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px;">Optimal Temperature Window Identified</h3>
+                        <p style="color: #475569; margin-bottom: 20px; line-height: 1.6;">Analysis shows 18% higher titer at 30-32°C vs 37°C. Temperature-sensitive promoters may benefit from reduced cultivation temperature.</p>
+                        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+                            <span style="font-size: 0.9rem; color: #64748B; font-weight: 600;">Confidence:</span>
+                            <div style="flex: 1; max-width: 200px; background: #E2E8F0; height: 12px; border-radius: 6px; overflow: hidden;">
+                                <div style="width: 89%; height: 100%; background: #10B981; border-radius: 6px;"></div>
                             </div>
-                            <span style="font-size: 13px; font-weight: 700;">89%</span>
+                            <span style="font-size: 0.95rem; font-weight: 700; color: #0F172A;">89%</span>
                         </div>
                         <button class="button-primary">Design DoE</button>
                     </div>
                 </div>
             </div>
 
-            <div style="background: #d1f4e0; border: 1px solid #91e5b5; border-radius: 24px; padding: 24px;">
-                <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">Recommended Next Experiments</h3>
-                <p style="font-size: 13px; color: #374151; margin-bottom: 20px;">Bayesian optimization suggests these parameter combinations for maximal information gain</p>
-                <div style="background: white; border-radius: 16px; padding: 16px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
-                    <div style="display: flex; gap: 24px; font-size: 13px;">
-                        <div><span style="color: #6b7280;">Temp:</span> <span style="font-weight: 600;">30.5°C</span></div>
-                        <div><span style="color: #6b7280;">pH:</span> <span style="font-weight: 600;">7.2</span></div>
-                        <div><span style="color: #6b7280;">Substrate:</span> <span style="font-weight: 600;">48 g/L</span></div>
+            <div style="background: linear-gradient(to right, #EFF6FF 0%, #DBEAFE 100%); border: 1px solid #BFDBFE; border-radius: 16px; padding: 32px;">
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #0F172A;">Recommended Next Experiments</h3>
+                <p style="font-size: 0.9rem; color: #475569; margin-bottom: 24px;">Bayesian optimization suggests these parameter combinations for maximal information gain</p>
+                <div class="recommendation-card">
+                    <div class="recommendation-params">
+                        <div class="param-item">Temp: <span>30.5°C</span></div>
+                        <div class="param-item">pH: <span>7.2</span></div>
+                        <div class="param-item">Substrate: <span>48 g/L</span></div>
                     </div>
-                    <div style="display: flex; gap: 16px; align-items: center;">
-                        <div style="text-align: right;">
-                            <div style="font-size: 11px; color: #6b7280;">Predicted Yield</div>
-                            <div style="font-size: 18px; font-weight: 700; color: #3d9970;">84% <span style="font-size: 11px; color: #9ca3af;">±3.2</span></div>
+                    <div class="recommendation-result">
+                        <div class="predicted-yield">
+                            <div class="predicted-yield-label">Predicted Yield</div>
+                            <div class="predicted-yield-value">84% <span class="confidence-range">±3.2</span></div>
                         </div>
                         <button class="button-primary">Queue Run</button>
                     </div>
@@ -669,7 +806,7 @@
             if (!svg) return;
             
             const width = 800;
-            const height = 200;
+            const height = 220;
             const padding = 60;
             
             const maxVal = Math.max(4, Math.max(...chartData) * 1.1);
@@ -688,8 +825,8 @@
                 const value = (i / ySteps) * maxVal;
                 const y = height - padding - (i / ySteps) * (height - 2 * padding);
                 yTicks += `
-                    <line x1="${padding - 5}" y1="${y}" x2="${padding}" y2="${y}" stroke="#d1d5db" stroke-width="1"/>
-                    <text x="${padding - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#6b7280">${value.toFixed(1)}</text>
+                    <line x1="${padding - 5}" y1="${y}" x2="${padding}" y2="${y}" stroke="#CBD5E1" stroke-width="1"/>
+                    <text x="${padding - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#64748B" font-weight="500">${value.toFixed(1)}</text>
                 `;
             }
 
@@ -700,8 +837,8 @@
                 const x = padding + (i / numXTicks) * (width - 2 * padding);
                 const timeMinutes = Math.floor((timeCounter - chartData.length + (i / numXTicks) * chartData.length) * 5);
                 xTicks += `
-                    <line x1="${x}" y1="${height - padding}" x2="${x}" y2="${height - padding + 5}" stroke="#d1d5db" stroke-width="1"/>
-                    <text x="${x}" y="${height - padding + 18}" text-anchor="middle" font-size="11" fill="#6b7280">${timeMinutes}min</text>
+                    <line x1="${x}" y1="${height - padding}" x2="${x}" y2="${height - padding + 5}" stroke="#CBD5E1" stroke-width="1"/>
+                    <text x="${x}" y="${height - padding + 18}" text-anchor="middle" font-size="11" fill="#64748B" font-weight="500">${timeMinutes}min</text>
                 `;
             }
 
@@ -709,7 +846,7 @@
             let gridLines = '';
             for (let i = 1; i < ySteps; i++) {
                 const y = height - padding - (i / ySteps) * (height - 2 * padding);
-                gridLines += `<line x1="${padding}" y1="${y}" x2="${width - padding}" y2="${y}" stroke="#f3f4f6" stroke-width="1"/>`;
+                gridLines += `<line x1="${padding}" y1="${y}" x2="${width - padding}" y2="${y}" stroke="#F1F5F9" stroke-width="1"/>`;
             }
 
             svg.innerHTML = `
@@ -717,8 +854,8 @@
                 ${gridLines}
                 
                 <!-- Axes -->
-                <line x1="${padding}" y1="${padding}" x2="${padding}" y2="${height - padding}" stroke="#d1d5db" stroke-width="2"/>
-                <line x1="${padding}" y1="${height - padding}" x2="${width - padding}" y2="${height - padding}" stroke="#d1d5db" stroke-width="2"/>
+                <line x1="${padding}" y1="${padding}" x2="${padding}" y2="${height - padding}" stroke="#CBD5E1" stroke-width="2"/>
+                <line x1="${padding}" y1="${height - padding}" x2="${width - padding}" y2="${height - padding}" stroke="#CBD5E1" stroke-width="2"/>
                 
                 <!-- Y-axis ticks and labels -->
                 ${yTicks}
@@ -727,8 +864,8 @@
                 ${xTicks}
                 
                 <!-- Axis titles -->
-                <text x="${width / 2}" y="${height - 5}" text-anchor="middle" font-size="13" fill="#374151" font-weight="500">Time</text>
-                <text x="20" y="${height / 2}" text-anchor="middle" font-size="13" fill="#374151" font-weight="500" transform="rotate(-90 20 ${height / 2})">OD₆₀₀</text>
+                <text x="${width / 2}" y="${height - 5}" text-anchor="middle" font-size="12" fill="#475569" font-weight="600">Time</text>
+                <text x="20" y="${height / 2}" text-anchor="middle" font-size="12" fill="#475569" font-weight="600" transform="rotate(-90 20 ${height / 2})">OD₆₀₀</text>
                 
                 <!-- Glow effect for data line -->
                 <polyline points="${points}" class="chart-glow"/>
@@ -737,7 +874,7 @@
                 <polyline points="${points}" class="chart-line"/>
                 
                 <!-- Current value indicator -->
-                <circle cx="${padding + (width - 2 * padding)}" cy="${height - padding - (chartData[chartData.length - 1] / maxVal) * (height - 2 * padding)}" r="5" fill="#3d9970" stroke="white" stroke-width="2"/>
+                <circle cx="${padding + (width - 2 * padding)}" cy="${height - padding - (chartData[chartData.length - 1] / maxVal) * (height - 2 * padding)}" r="6" fill="#2563EB" stroke="white" stroke-width="2.5"/>
             `;
         }
 
@@ -792,9 +929,9 @@
                 const y = height - padding - ((ph - 6.5) / 2) * (height - 2 * padding);
                 const r = 4 + (yieldVal / 100) * 6;
                 
-                let color = yieldVal >= 70 ? '#3d9970' : yieldVal >= 50 ? '#f59e0b' : '#dc2626';
+                let color = yieldVal >= 70 ? '#10B981' : yieldVal >= 50 ? '#F59E0B' : '#EF4444';
                 
-                points += `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" fill-opacity="0.7" stroke="white" stroke-width="1" class="scatter-point"/>`;
+                points += `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" fill-opacity="0.8" stroke="white" stroke-width="2" class="scatter-point"/>`;
             }
 
             // Generate Y-axis tick marks (pH 6.5-8.5)
@@ -802,8 +939,8 @@
             for (let i = 6.5; i <= 8.5; i += 0.5) {
                 const y = height - padding - ((i - 6.5) / 2) * (height - 2 * padding);
                 yTicks += `
-                    <line x1="${padding - 5}" y1="${y}" x2="${padding}" y2="${y}" stroke="#9ca3af" stroke-width="1"/>
-                    <text x="${padding - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#6b7280">${i.toFixed(1)}</text>
+                    <line x1="${padding - 5}" y1="${y}" x2="${padding}" y2="${y}" stroke="#CBD5E1" stroke-width="1"/>
+                    <text x="${padding - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#64748B" font-weight="500">${i.toFixed(1)}</text>
                 `;
             }
 
@@ -812,15 +949,15 @@
             for (let i = 25; i <= 37; i += 2) {
                 const x = padding + ((i - 25) / 12) * (width - 2 * padding);
                 xTicks += `
-                    <line x1="${x}" y1="${height - padding}" x2="${x}" y2="${height - padding + 5}" stroke="#9ca3af" stroke-width="1"/>
-                    <text x="${x}" y="${height - padding + 18}" text-anchor="middle" font-size="11" fill="#6b7280">${i}</text>
+                    <line x1="${x}" y1="${height - padding}" x2="${x}" y2="${height - padding + 5}" stroke="#CBD5E1" stroke-width="1"/>
+                    <text x="${x}" y="${height - padding + 18}" text-anchor="middle" font-size="11" fill="#64748B" font-weight="500">${i}</text>
                 `;
             }
 
             svg.innerHTML = `
                 <!-- Axes -->
-                <line x1="${padding}" y1="${padding}" x2="${padding}" y2="${height - padding}" stroke="#d1d5db" stroke-width="2"/>
-                <line x1="${padding}" y1="${height - padding}" x2="${width - padding}" y2="${height - padding}" stroke="#d1d5db" stroke-width="2"/>
+                <line x1="${padding}" y1="${padding}" x2="${padding}" y2="${height - padding}" stroke="#CBD5E1" stroke-width="2"/>
+                <line x1="${padding}" y1="${height - padding}" x2="${width - padding}" y2="${height - padding}" stroke="#CBD5E1" stroke-width="2"/>
                 
                 <!-- Y-axis ticks -->
                 ${yTicks}
@@ -829,8 +966,8 @@
                 ${xTicks}
                 
                 <!-- Axis labels -->
-                <text x="${width / 2}" y="${height - 20}" text-anchor="middle" font-size="14" fill="#374151" font-weight="500">Temperature (°C)</text>
-                <text x="25" y="${height / 2}" text-anchor="middle" font-size="14" fill="#374151" font-weight="500" transform="rotate(-90 25 ${height / 2})">pH</text>
+                <text x="${width / 2}" y="${height - 20}" text-anchor="middle" font-size="13" fill="#475569" font-weight="600">Temperature (°C)</text>
+                <text x="25" y="${height / 2}" text-anchor="middle" font-size="13" fill="#475569" font-weight="600" transform="rotate(-90 25 ${height / 2})">pH</text>
                 
                 <!-- Data points -->
                 ${points}
@@ -841,7 +978,7 @@
         drawLiveChart();
         drawScatterPlot();
         
-        // Start smooth animation (faster update for smoother motion)
+        // Start smooth animation
         setInterval(updateChart, 400);
     </script>
 </body>
