@@ -190,22 +190,26 @@
         }
 
         .stat-card {
-            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+            background: #FFFFFF;
             border-radius: 16px;
-            padding: 32px;
-            color: white;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 28px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #E2E8F0;
+            border-top: 4px solid #2563EB;
+            transition: all 0.2s;
+        }
+
+        .stat-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
         }
 
         .stat-card:nth-child(2) {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+            border-top-color: #10B981;
         }
 
         .stat-card:nth-child(3) {
-            background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
-            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+            border-top-color: #94A3B8;
         }
 
         .stat-value {
@@ -213,12 +217,25 @@
             font-weight: 700;
             margin-bottom: 8px;
             letter-spacing: -0.02em;
+            color: #0F172A;
+        }
+
+        .stat-card:nth-child(1) .stat-value {
+            color: #2563EB;
+        }
+
+        .stat-card:nth-child(2) .stat-value {
+            color: #10B981;
+        }
+
+        .stat-card:nth-child(3) .stat-value {
+            color: #475569;
         }
 
         .stat-label {
             font-size: 0.95rem;
-            opacity: 0.95;
             font-weight: 500;
+            color: #64748B;
         }
 
         .instrument-grid {
@@ -417,7 +434,7 @@
             justify-content: center;
             gap: 32px;
             margin-top: 24px;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .legend-item {
@@ -429,8 +446,8 @@
         }
 
         .legend-dot {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
         }
 
@@ -688,8 +705,8 @@
             <div class="card">
                 <h2>Design Space Explorer</h2>
                 <p>Visualizing 50 experiments across temperature and pH parameters. Point size and color indicate yield performance.</p>
-                <div style="height: 450px; background: #F8FAFC; border-radius: 12px; padding: 40px; border: 1px solid #E2E8F0;">
-                    <svg id="scatterChart" width="100%" height="100%" viewBox="0 0 700 350">
+                <div style="height: 520px; background: #F8FAFC; border-radius: 12px; padding: 32px 24px; border: 1px solid #E2E8F0;">
+                    <svg id="scatterChart" width="100%" height="100%" viewBox="0 0 800 440">
                         <!-- Scatter plot will be drawn here -->
                     </svg>
                 </div>
@@ -703,7 +720,7 @@
                         <span>Medium (50-70%)</span>
                     </div>
                     <div class="legend-item">
-                        <div class="legend-dot" style="background: #EF4444;"></div>
+                        <div class="legend-dot" style="background: #2563EB;"></div>
                         <span>Low (<50%)</span>
                     </div>
                 </div>
@@ -915,8 +932,8 @@
             const svg = document.getElementById('scatterChart');
             if (!svg) return;
             
-            const width = 700;
-            const height = 350;
+            const width = 800;
+            const height = 440;
             const padding = 80;
             
             let points = '';
@@ -927,9 +944,9 @@
                 
                 const x = padding + ((temp - 25) / 12) * (width - 2 * padding);
                 const y = height - padding - ((ph - 6.5) / 2) * (height - 2 * padding);
-                const r = 4 + (yieldVal / 100) * 6;
+                const r = 5 + (yieldVal / 100) * 7;
                 
-                let color = yieldVal >= 70 ? '#10B981' : yieldVal >= 50 ? '#F59E0B' : '#EF4444';
+                let color = yieldVal >= 70 ? '#10B981' : yieldVal >= 50 ? '#F59E0B' : '#2563EB';
                 
                 points += `<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" fill-opacity="0.8" stroke="white" stroke-width="2" class="scatter-point"/>`;
             }
@@ -940,7 +957,7 @@
                 const y = height - padding - ((i - 6.5) / 2) * (height - 2 * padding);
                 yTicks += `
                     <line x1="${padding - 5}" y1="${y}" x2="${padding}" y2="${y}" stroke="#CBD5E1" stroke-width="1"/>
-                    <text x="${padding - 10}" y="${y + 4}" text-anchor="end" font-size="11" fill="#64748B" font-weight="500">${i.toFixed(1)}</text>
+                    <text x="${padding - 10}" y="${y + 4}" text-anchor="end" font-size="13" fill="#64748B" font-weight="500">${i.toFixed(1)}</text>
                 `;
             }
 
@@ -950,7 +967,7 @@
                 const x = padding + ((i - 25) / 12) * (width - 2 * padding);
                 xTicks += `
                     <line x1="${x}" y1="${height - padding}" x2="${x}" y2="${height - padding + 5}" stroke="#CBD5E1" stroke-width="1"/>
-                    <text x="${x}" y="${height - padding + 18}" text-anchor="middle" font-size="11" fill="#64748B" font-weight="500">${i}</text>
+                    <text x="${x}" y="${height - padding + 18}" text-anchor="middle" font-size="13" fill="#64748B" font-weight="500">${i}</text>
                 `;
             }
 
@@ -966,8 +983,8 @@
                 ${xTicks}
                 
                 <!-- Axis labels -->
-                <text x="${width / 2}" y="${height - 20}" text-anchor="middle" font-size="13" fill="#475569" font-weight="600">Temperature (°C)</text>
-                <text x="25" y="${height / 2}" text-anchor="middle" font-size="13" fill="#475569" font-weight="600" transform="rotate(-90 25 ${height / 2})">pH</text>
+                <text x="${width / 2}" y="${height - 20}" text-anchor="middle" font-size="15" fill="#475569" font-weight="600">Temperature (°C)</text>
+                <text x="25" y="${height / 2}" text-anchor="middle" font-size="15" fill="#475569" font-weight="600" transform="rotate(-90 25 ${height / 2})">pH</text>
                 
                 <!-- Data points -->
                 ${points}
